@@ -1,0 +1,6 @@
+roles
+administrador
+soporte
+comerciante
+cliente
+
