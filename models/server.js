@@ -8,7 +8,8 @@ class Server{
         this.paths={
             usuarios:'/api/usuarios',
             auth:'/api/auth',
-            commerce:'/api/commerce'
+            commerce:'/api/commerce',
+            products:'/api/products'
         }
 
         //conectar a base de datos
@@ -41,6 +42,7 @@ class Server{
         this.app.use(this.paths.auth,require('../routes/auth.routes'))
        this.app.use(this.paths.usuarios,require('../routes/user.routes'))
        this.app.use(this.paths.commerce,require('../routes/commerce.routes'))
+       this.app.use(this.paths.products,require('../routes/product.routes'))
 
     }
 

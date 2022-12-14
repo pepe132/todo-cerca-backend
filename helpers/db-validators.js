@@ -4,6 +4,8 @@ const Usuario=require('../models/user');
 
 const Comercio=require('../models/commerce');
 
+const Producto=require('../models/product')
+
 const esRoleValido=async(rol='')=>{
     const existeRol=await Role.findOne({rol});
     if (!existeRol){
@@ -34,10 +36,18 @@ const existeComercioPorId=async(id)=>{
     }   
 }
 
+const existeProductoPorId=async(id)=>{
+    const existeProducto=await Producto.findById(id)
+    if (!existeProducto) {
+        throw new Error(`El id no existe: ${id}`);
+    }   
+}
+
 module.exports={
     esRoleValido,
     existeEmail,
     existeUsuarioPorId,
-    existeComercioPorId
+    existeComercioPorId,
+    existeProductoPorId
     
 }
