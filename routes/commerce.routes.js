@@ -3,7 +3,7 @@ const { check } = require('express-validator');
 const { existeComercioPorId } = require("../helpers/db-validators");
 const {CommerceGet, CommerceGetById, createCommerce, updateCommerce}= require('../controllers/commerce.controllers')
 const { validarCampos } = require("../middlewares/validar-campos");
-const { validarJWT } = require("../middlewares/validar-JWT");
+const { validarJWT } = require("../middlewares/validar-jwt");
 
 const router=Router();
 
