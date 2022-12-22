@@ -14,6 +14,11 @@ const CommerceSchema=Schema({
         type:String,
        
     },
+    productos:{
+        type:Schema.Types.ObjectId,
+        ref:'Producto',
+        required:true
+    },
     
     imagen_negocio:{
         type:String,

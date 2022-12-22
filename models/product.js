@@ -19,10 +19,7 @@ const ProductoSchema=Schema({
         ref:'Comercio',
         required:true
     },
-    nombre_comercio:{
-        type:Schema.Types.String,
-        ref:'Comercio'
-    },
+   
     descripcion:{type:String},
     disponible:{type:Boolean,default:true},
     img:{type:String,default:null},

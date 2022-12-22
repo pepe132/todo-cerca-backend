@@ -8,6 +8,7 @@ const CommerceGet=async(req, res=response)=> {
     const [total,commerce]=await Promise.all([//promise.all es para ejecutar acciones de manera simultanea
         Comercio.countDocuments({estado:true}),
         Comercio.find({estado:true})
+            .populate('productos')
             .skip(Number(desde))
             .limit(Number(limite))
 
